@@ -17,7 +17,7 @@ reviews:
     enabled: true # 자동 리뷰 활성화
     on_open: true # PR 생성 시 자동 리뷰
     on_push: false # 커밋 추가(push) 시 자동 리뷰 ❌
-    on_comment: true # 수동 요청 가능 ("@coderabbit-ai review")
+    on_comment: true # 수동 요청 가능 ("@coderabbitai review")
     drafts: false # 드래프트 PR 리뷰
     base_branches: ["dev"] # 리뷰할 기본 브랜치
     ignore_usernames: [] # 리뷰에서 제외할 사용자
