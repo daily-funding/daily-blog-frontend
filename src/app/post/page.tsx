@@ -1,3 +1,3 @@
-export default function Post() {
-  return <div>Hi</div>;
+export default function Detail() {
+    return <div>hello</div>
 }
