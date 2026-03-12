@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <footer className="footerObject">
-        <div className="snsLinkSection">
+        <div className="footerSNSLinkSection">
           <a
             href="https://www.instagram.com/dailyfunding/"
             target="_blank"
@@ -22,13 +22,19 @@ export default function Footer() {
             <img src="/footer/brunch-logo.png" alt="데일리펀딩 브런치" />
           </a>
         </div>
-        <div className="dailyFundingLinkSection">
-            <p className="explainText">이 모든 걸 경험할 수 있는</p>
-            <em className="link">데일리펀딩 바로가기</em>
+        <div className="footerDailyFundingLinkSection">
+          <p className="footerExplainText">이 모든 걸 경험할 수 있는</p>
+          <a
+            href="https://new.daily-funding.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <em className="footerLink">데일리펀딩 바로가기</em>
+          </a>
         </div>
-        <div className="copyrightSection">
-            <p>&copy; 2020 DAILYFUNDING.</p>
-            <p>모든 콘텐츠의 저작권은 데일리펀딩에 있습니다.</p>
+        <div className="footerCopyrightSection">
+          <p>&copy; 2020 DAILYFUNDING.</p>
+          <p>모든 콘텐츠의 저작권은 데일리펀딩에 있습니다.</p>
         </div>
       </footer>
     </div>

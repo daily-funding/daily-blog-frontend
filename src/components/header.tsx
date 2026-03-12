@@ -6,7 +6,7 @@ export default function Header() {
     <div className="header">
       <header className="headerObject">
         <img
-          className="/dailyInsightLogo"
+          className="headerDailyInsightLogo"
           src="/header/daily-insight-logo.png"
           alt=""
         />
@@ -15,10 +15,10 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="dailyFundingLink">
+          <div className="headerDailyFundingLink">
             <span>데일리펀딩 바로가기</span>
             <img
-              className="linkSymbol"
+              className="headerLinkSymbol"
               src="/header/dailyfunding-link.png"
               alt=""
             />

@@ -10,12 +10,12 @@
   padding: 36px 0px 29px 0px;
 }
 
-.snsLink {
+.FooterSNSLinkSection {
     display: flex;
     align-items: center;
 }
 
-.dailyFundingLink {
+.footerDailyFundingLinkSection {
     display:block ;
 }
 
