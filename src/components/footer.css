@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  height: 244px;
+  /* background-color: #f6f7f8; */
+  background-color: black;
+}
+
+.footerObject {
+  align-items: center;
+  padding: 36px 0px 29px 0px;
+}
+
+.snsLink {
+    display: flex;
+    align-items: center;
+}
+
+.dailyFundingLink {
+    display:block ;
+}
+
+/* @media (max-width: 768) {
+  .footer {
+    width: 100%;
+    height: 234px;
+  }
+} */

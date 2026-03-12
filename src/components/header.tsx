@@ -6,8 +6,8 @@ export default function Header() {
     <div className="header">
       <header className="headerObject">
         <img
-          className="dailyInsightLogo"
-          src="/daily-insight-logo.png"
+          className="/dailyInsightLogo"
+          src="/header/daily-insight-logo.png"
           alt=""
         />
         <a
@@ -19,7 +19,7 @@ export default function Header() {
             <span>데일리펀딩 바로가기</span>
             <img
               className="linkSymbol"
-              src="/dailyfunding-link.png"
+              src="/header/dailyfunding-link.png"
               alt=""
             />
           </div>
