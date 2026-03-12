@@ -20,7 +20,7 @@ export default function Header() {
             <img
               className="linkSymbol"
               src="/dailyfunding-link.png"
-              alt="데일리펀딩 바로가기"
+              alt=""
             />
           </div>
         </a>
