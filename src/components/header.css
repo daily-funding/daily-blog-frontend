@@ -1,0 +1,20 @@
+.header {
+    width: 100%;
+}
+
+.headerObject {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 41px 0px 31px 
+}
+
+.dailyFundingLink {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.logo {
+    height: 25px;
+}
