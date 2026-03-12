@@ -29,6 +29,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 0 22px;
+  flex-wrap: wrap;
 }
 
 .footerDailyFundingLinkSection p {
@@ -37,7 +38,7 @@
   font-weight: 500;
   font-size: 18px;
   letter-spacing: -0.36px;
-  margin: 0 5 0 0px;
+  margin: 0 5px 0 0;
 }
 
 .footerDailyFundingLinkSection em {
@@ -47,7 +48,7 @@
   font-weight: 700;
   font-size: 18px;
   letter-spacing: -0.36px;
-  margin: 0 5 0 0px;
+  margin: 0 5px 0 0;
 }
 
 .footerCopyrightSection {
@@ -55,6 +56,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .footerCopyrightSection p {
