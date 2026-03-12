@@ -14,6 +14,11 @@
   height: 38px;
 }
 
+.headerBackButton {
+  width: 20px;
+  height: 37px;
+}
+
 .headerDailyFundingLink {
   display: flex;
   align-items: center;
@@ -30,6 +35,11 @@
 .headerLinkSymbol {
   width: 29px;
   height: 29px;
+}
+
+.headerCancelButton {
+  width: 37px;
+  height: 37px;
 }
 
 @media (max-width: 1200px) {
@@ -88,6 +98,11 @@
     gap: 6px;
   }
 
+  .headerBackButton {
+    width: 15px;
+    height: 29px;
+  }
+
   .headerDailyFundingLink span {
     font-size: 12px;
   }
@@ -95,5 +110,16 @@
   .headerLinkSymbol {
     width: 16px;
     height: 16px;
+  }
+
+  .headerCancelButton {
+    width: 29px;
+    height: 29px;
+  }
+}
+
+@media (max-width: 414px) {
+  .headerObject {
+    padding: 27px 26px;
   }
 }
