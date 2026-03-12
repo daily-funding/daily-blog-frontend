@@ -32,11 +32,20 @@
   flex-wrap: wrap;
 }
 
-.footerDailyFundingLinkSection p, em {
+.footerDailyFundingLinkSection p {
   display: block;
   color: #666666;
   font-weight: 500;
   font-size: 18px;
+  letter-spacing: -0.36px;
+  margin: 0 5px 0 0;
+}
+.footerDailyFundingLinkSection em {
+  display: block;
+  color: #666666;
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
   letter-spacing: -0.36px;
   margin: 0 5px 0 0;
 }
