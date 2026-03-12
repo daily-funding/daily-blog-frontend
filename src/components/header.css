@@ -1,0 +1,67 @@
+.header {
+  width: 100%;
+}
+
+.headerObject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 41px 0px 31px;
+}
+
+.dailyInsightLogo {
+  width: 237px;
+  height: 38px;
+}
+
+.dailyFundingLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dailyFundingLink span {
+  font-size: 18px;
+  letter-spacing: -1.08px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.linkSymbol {
+  width: 29px;
+  height: 29px;
+}
+
+@media (max-width: 1200px) {
+
+  .dailyInsightLogo {
+    width: 212px;
+    height: 34px;
+  }
+
+  .dailyFundingLink span {
+    font-size: 16px;
+  }
+
+  .linkSymbol {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .dailyInsightLogo {
+    width: 143px;
+    height: 23px;
+  }
+
+  .dailyFundingLink span {
+    font-size: 12px;
+  }
+
+  .linkSymbol {
+    width: 16px;
+    height: 16px;
+  }
+}
