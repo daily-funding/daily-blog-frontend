@@ -8,7 +8,7 @@ export default function Header() {
         <img
           className="dailyInsightLogo"
           src="/daily-insight-logo.png"
-          alt="데일리 인사이트"
+          alt=""
         />
         <a
           href="https://new.daily-funding.com/"
