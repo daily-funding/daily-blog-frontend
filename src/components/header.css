@@ -28,6 +28,7 @@
 }
 
 .linkSymbol {
+  width: 29px;
   height: 29px;
 }
 
@@ -59,6 +60,7 @@
   }
 
   .linkSymbol {
+    width: 25px;
     height: 25px;
   }
 }
@@ -91,6 +93,7 @@
   }
 
   .linkSymbol {
+    width: 16px;
     height: 16px;
   }
 }
