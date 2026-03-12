@@ -22,16 +22,16 @@ export default function Footer() {
             <img src="/footer/brunch-logo.png" alt="데일리펀딩 브런치" />
           </a>
         </div>
-        <div className="footerDailyFundingLinkSection">
-          <p className="footerExplainText">이 모든 걸 경험할 수 있는</p>
-          <a
-            href="https://new.daily-funding.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <a
+          href="https://new.daily-funding.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="footerDailyFundingLinkSection">
+            <p className="footerExplainText">이 모든 걸 경험할 수 있는</p>
             <em className="footerLink">데일리펀딩 바로가기</em>
-          </a>
-        </div>
+          </div>
+        </a>
         <div className="footerCopyrightSection">
           <p>&copy; 2020 DAILYFUNDING.</p>
           <p>모든 콘텐츠의 저작권은 데일리펀딩에 있습니다.</p>
