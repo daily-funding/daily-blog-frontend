@@ -12,16 +12,13 @@ export default function UpButton() {
 
   return (
     <>
-      <div className="up-btn-container">
-        <button className="up-btn" onClick={handleTop}>
-          <Image
-            src="/footer/up-button.png"
-            alt="위로 가기"
-            width={61}
-            height={61}
-          />
-        </button>
-      </div>
+      <button type="button" className="up-btn" onClick={handleTop}>
+        <Image
+          src="/footer/up-button.png"
+          alt="위로 가기"
+          style={{ width: "100%", height: "100%" }}
+        />
+      </button>
 
       <style jsx>{`
         .up-btn {
