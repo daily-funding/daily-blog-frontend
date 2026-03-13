@@ -45,14 +45,16 @@ export default function TopCarousel() {
             <img src={post.preview_image} alt="" />
             <div className="topCarouselTextSection">
               <p className="category_badge">{post.category_name}</p>
-              <div
+              <button
+                type="button"
+                className="topCarouselPostLink"
                 onClick={() => {
                   router.push(`/post/${post.post_id}`);
                 }}
               >
                 <h1 className="title">{post.title}</h1>
                 <p className="subtitle">{post.subtitle}</p>
-              </div>
+              </button>
             </div>
           </div>
         ))}

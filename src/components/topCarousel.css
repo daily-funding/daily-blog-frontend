@@ -142,7 +142,7 @@
 }
 
 .topCarouselNavButton button {
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .topCarouselNavButton img {
@@ -150,6 +150,12 @@
   height: 65px;
 }
 
-.topCarousel:hover .topCarouselNavButton {
+.topCarousel:hover .topCarouselNavButton,
+.topCarousel:focus-within .topCarouselNavButton {
   opacity: 1;
+}
+
+.topCarousel:hover .topCarouselNavButton button,
+.topCarousel:focus-within .topCarouselNavButton button {
+  pointer-events: auto;
 }
