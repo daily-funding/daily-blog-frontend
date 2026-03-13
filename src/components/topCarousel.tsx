@@ -1,9 +1,31 @@
 /* eslint-disable @next/next/no-img-element */
-import { mockTopPosts } from "../data/mockTopPosts"
 
-export default function TopCarousel() {
-    const mockPost = mockTopPosts.posts[0]
-    return <img src={mockPost.preview_image} alt=""/>
+import { mockTopPosts } from "../data/mockTopPosts";
+import "./topCarousel.css";
+
+async function getTopPosts() {
+  return mockTopPosts;
+}
+
+export default async function TopCarousel() {
+  const data = await getTopPosts();
+  const mockPost = data.posts;
+  return (
+    <div className="topCarousel">
+      <div className="topCarouselTrack">
+        {mockPost.map((post) => (
+          <div className="topCarouselSlide" key={post.post_id}>
+            <img src={post.preview_image} alt="" />
+            <div className="topCarouselTextSection">
+              <p className="category_badge">{post.category_name}</p>
+              <h1 className="title">{post.title}</h1>
+              <p className="subtitle">{post.subtitle}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 //TODO:- 너 carousel 구현 시작하고 있었고 header 부분이 구분되어 있길래 이걸 어떻게 해야 위에 얹을 수 있나 고민중이었다
