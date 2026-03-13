@@ -49,6 +49,7 @@ export default function TopCarousel() {
           <button
             className={index === selectedIndex ? "active" : "none"}
             key={index}
+            onClick={() => emblaApi?.scrollTo(index)}
           />
         ))}
       </div>
