@@ -42,7 +42,64 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform: translateY(-20px);
+  transform: translateY(-15px);
+}
+
+.category_badge {
+  display: inline-block;
+
+  font-family: "Noto Sans KR", AppleGothic, Dotum, sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: -1.38px;
+  color: rgb(255, 255, 255);
+
+  padding: 3px 26px 5px;
+  margin-bottom: 18px;
+
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 22px;
+
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+
+  box-sizing: border-box;
+}
+
+.title {
+  display: block;
+
+  font-family: "Noto Sans KR", AppleGothic, Dotum, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: -2.88px;
+  color: #ffffff;
+
+  max-width: 878px;
+  margin: 0 175px 22px;
+
+  text-align: center;
+  word-break: keep-all;
+
+  user-select: none;
+}
+
+.subtitle {
+  display: block;
+
+  font-family: "Noto Sans KR", AppleGothic, Dotum, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -1.2px;
+  color: #ffffff;
+
+  text-align: center;
+  word-break: keep-all;
+
+  user-select: none;
 }
 
 .topCarouselIndicator {

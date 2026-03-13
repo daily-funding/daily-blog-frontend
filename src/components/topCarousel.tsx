@@ -26,10 +26,15 @@ export default function TopCarousel() {
     updateIndex();
 
     emblaApi.on("select", updateIndex);
+
+    return () => {
+      emblaApi.off("select", updateIndex);
+    };
   }, [emblaApi]);
 
   //MARK:- 나중에 지우기 (index 보기용 로그)
   console.log("currentPageIndex:", selectedIndex);
+  
   return (
     <div className="topCarousel" ref={emblaRef}>
       <div className="topCarouselTrack">
@@ -49,15 +54,28 @@ export default function TopCarousel() {
           <button
             className={index === selectedIndex ? "active" : "none"}
             key={index}
-            onClick={() => emblaApi?.scrollTo(index)}
+            onClick={() => {
+              if (!emblaApi) return;
+              emblaApi.scrollTo(index);
+            }}
           />
         ))}
       </div>
       <div className="topCarouselNavButton">
-        <button onClick={() => emblaApi?.scrollPrev()}>
+        <button
+          onClick={() => {
+            if (!emblaApi) return;
+            emblaApi.scrollPrev();
+          }}
+        >
           <img src="/carousel/carousel-prev-button.png" alt="이전 게시물" />
         </button>
-        <button onClick={() => emblaApi?.scrollNext()}>
+        <button
+          onClick={() => {
+            if (!emblaApi) return;
+            emblaApi.scrollNext();
+          }}
+        >
           <img src="/carousel/carousel-next-button.png" alt="다음 게시물" />
         </button>
       </div>
