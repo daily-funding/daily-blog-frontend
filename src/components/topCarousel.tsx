@@ -4,22 +4,35 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { mockTopPosts } from "../data/mockTopPosts";
 import "./topCarousel.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function getTopPosts() {
   return mockTopPosts;
 }
 
 export default function TopCarousel() {
-  const [emblaRef] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const data = getTopPosts();
-  const mockPost = data.posts;
-  const [selectedIndex, setSelectedIndex] = useState();
+  const posts = data.posts;
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const updateIndex = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+    };
+
+    updateIndex();
+
+    emblaApi.on("select", updateIndex);
+  }, [emblaApi]);
+  //MARK:- 나중에 지우기 (index 보기용 로그)
+  console.log("currentPageIndex:", selectedIndex);
   return (
     <div className="topCarousel" ref={emblaRef}>
       <div className="topCarouselTrack">
-        {mockPost.map((post) => (
+        {posts.map((post) => (
           <div className="topCarouselSlide" key={post.post_id}>
             <img src={post.preview_image} alt="" />
             <div className="topCarouselTextSection">
@@ -28,6 +41,14 @@ export default function TopCarousel() {
               <p className="subtitle">{post.subtitle}</p>
             </div>
           </div>
+        ))}
+      </div>
+      <div className="topCarouselIndicator">
+        {posts.map((_, index) => (
+          <button
+            className={index === selectedIndex ? "active" : "none"}
+            key={index}
+          />
         ))}
       </div>
     </div>

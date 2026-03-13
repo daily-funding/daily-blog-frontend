@@ -45,10 +45,28 @@
   transform: translateY(-20px);
 }
 
-.topCarouselPagination {
+.topCarouselIndicator {
   z-index: 2;
   position: absolute;
   left: 50%;
-  bottom: 28px;
+  bottom: 30px;
   transform: translateX(-50%);
+}
+
+.topCarouselIndicator button.active {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+  opacity: 0.8;
+  margin: 0px 8px;
+}
+
+.topCarouselIndicator button.none {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+  opacity: 0.3;
+  margin: 0px 8px;
 }
