@@ -1,5 +1,9 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 10;
 }
 
 .headerObject {
@@ -7,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 27px 41px 0px 31px;
+  filter: drop-shadow(0px 2px 6px rgba(0,0,0,0.4));
 }
 
 .headerDailyInsightLogo {
@@ -35,6 +40,7 @@
 .headerLinkSymbol {
   width: 29px;
   height: 29px;
+  letter-spacing: -1.08px;
 }
 
 .headerCancelButton {
