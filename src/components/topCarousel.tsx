@@ -5,6 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { mockTopPosts } from "../data/mockTopPosts";
 import "./topCarousel.css";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 function getTopPosts() {
   return mockTopPosts;
@@ -15,6 +16,7 @@ export default function TopCarousel() {
   const data = getTopPosts();
   const posts = data.posts;
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -34,7 +36,7 @@ export default function TopCarousel() {
 
   //MARK:- 나중에 지우기 (index 보기용 로그)
   console.log("currentPageIndex:", selectedIndex);
-  
+
   return (
     <div className="topCarousel" ref={emblaRef}>
       <div className="topCarouselTrack">
@@ -43,8 +45,14 @@ export default function TopCarousel() {
             <img src={post.preview_image} alt="" />
             <div className="topCarouselTextSection">
               <p className="category_badge">{post.category_name}</p>
-              <h1 className="title">{post.title}</h1>
-              <p className="subtitle">{post.subtitle}</p>
+              <div
+                onClick={() => {
+                  router.push(`/post/${post.post_id}`);
+                }}
+              >
+                <h1 className="title">{post.title}</h1>
+                <p className="subtitle">{post.subtitle}</p>
+              </div>
             </div>
           </div>
         ))}
@@ -52,7 +60,7 @@ export default function TopCarousel() {
       <div className="topCarouselIndicator">
         {posts.map((_, index) => (
           <button
-            className={index === selectedIndex ? "active" : "none"}
+            className={index === selectedIndex ? "active" : ""}
             key={index}
             onClick={() => {
               if (!emblaApi) return;

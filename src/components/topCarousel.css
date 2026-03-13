@@ -60,10 +60,6 @@
   border: 1px solid rgb(255, 255, 255);
   border-radius: 22px;
 
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-
   box-sizing: border-box;
 }
 
@@ -111,7 +107,7 @@
 }
 
 .topCarouselIndicator button.active {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 50%;
   width: 11px;
   height: 11px;
@@ -119,8 +115,8 @@
   margin: 0px 8px;
 }
 
-.topCarouselIndicator button.none {
-  background-color: #FFFFFF;
+.topCarouselIndicator button {
+  background-color: #ffffff;
   border-radius: 50%;
   width: 11px;
   height: 11px;
@@ -129,7 +125,8 @@
 }
 
 .topCarouselNavButton {
-  z-index: 2;
+  z-index: 3;
+
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -139,12 +136,18 @@
   transform: translateY(-50%);
   padding: 0px 65px;
   opacity: 0;
-  filter: drop-shadow(0px 2px 6px rgba(0,0,0,0.4));
+  filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.4));
+
+  pointer-events: none;
 }
 
-.topCarouselNavButton img{
-  width:65px;
-  height:65px;
+.topCarouselNavButton button {
+  pointer-events: auto;
+}
+
+.topCarouselNavButton img {
+  width: 65px;
+  height: 65px;
 }
 
 .topCarousel:hover .topCarouselNavButton {
