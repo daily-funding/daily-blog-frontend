@@ -48,8 +48,8 @@ export default function UpButton() {
           .up-btn {
             width: 47px;
             height: 47px;
-            right: 20px;
-            bottom: 20px;
+            right: 14px;
+            bottom: 14px;
           }
         }
       `}</style>
