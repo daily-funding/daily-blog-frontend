@@ -27,6 +27,7 @@ export default function TopCarousel() {
 
     emblaApi.on("select", updateIndex);
   }, [emblaApi]);
+
   //MARK:- 나중에 지우기 (index 보기용 로그)
   console.log("currentPageIndex:", selectedIndex);
   return (
@@ -50,6 +51,14 @@ export default function TopCarousel() {
             key={index}
           />
         ))}
+      </div>
+      <div className="topCarouselNavButton">
+        <button onClick={() => emblaApi?.scrollPrev()}>
+          <img src="/carousel/carousel-prev-button.png" alt="이전 게시물" />
+        </button>
+        <button onClick={() => emblaApi?.scrollNext()}>
+          <img src="/carousel/carousel-next-button.png" alt="다음 게시물" />
+        </button>
       </div>
     </div>
   );
