@@ -4,7 +4,7 @@
   height: 814px;
   overflow: hidden;
 }
-.topCarousel::after {
+.topCarouselSlide::after {
   z-index: 1;
   pointer-events: none;
   content: "";
@@ -22,6 +22,8 @@
 }
 
 .topCarouselTrack {
+  z-index: 2;
+  position: relative;
   display: flex;
   height: 100%;
 }

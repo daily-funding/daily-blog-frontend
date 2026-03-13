@@ -1,17 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 
+import useEmblaCarousel from "embla-carousel-react";
 import { mockTopPosts } from "../data/mockTopPosts";
 import "./topCarousel.css";
+import { useState } from "react";
 
-async function getTopPosts() {
+function getTopPosts() {
   return mockTopPosts;
 }
 
-export default async function TopCarousel() {
-  const data = await getTopPosts();
+export default function TopCarousel() {
+  const [emblaRef] = useEmblaCarousel({ loop: true });
+  const data = getTopPosts();
   const mockPost = data.posts;
+  const [selectedIndex, setSelectedIndex] = useState();
+
   return (
-    <div className="topCarousel">
+    <div className="topCarousel" ref={emblaRef}>
       <div className="topCarouselTrack">
         {mockPost.map((post) => (
           <div className="topCarouselSlide" key={post.post_id}>
