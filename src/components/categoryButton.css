@@ -1,0 +1,39 @@
+.categorySection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 89px;
+  width: 1046px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categorySection button {
+  display: inline-block;
+  height: 34px;
+  width: auto;
+
+  margin: 0 8px 16px 8px;
+  padding: 4px 25px 5px;
+  opacity: 0.4;
+
+  border: 1px solid rgb(144, 144, 144);
+  border-radius: 22px;
+
+  color: rgb(48, 48, 48);
+  text-align: center;
+
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.active button {
+  opacity: 1;
+}
+
+.categorySection button:hover {
+  opacity: 1;
+}
