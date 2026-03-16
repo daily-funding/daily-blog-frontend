@@ -16,6 +16,8 @@ export default function UpButton() {
         <Image
           src="/footer/up-button.png"
           alt="위로 가기"
+          width={61}
+          height={61}
           style={{ width: "100%", height: "100%" }}
         />
       </button>
