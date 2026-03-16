@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { mockCategories } from "../data/mockCategories";
+import { mockCategories } from "../../../data/mockCategories";
 import "./categoryButton.css";
 import Link from "next/link";
 

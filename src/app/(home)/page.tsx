@@ -1,5 +1,5 @@
-import CategoryButton from "@/src/components/categoryButton";
-import TopCarousel from "@/src/components/topCarousel";
+import CategoryButton from "@/src/app/(home)/components/categoryButton";
+import TopCarousel from "./components/topCarousel";
 import UpButton from "@/src/components/upButton";
 import "./home.css";
 
