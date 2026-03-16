@@ -2,19 +2,31 @@
 "use client";
 
 import useEmblaCarousel from "embla-carousel-react";
-import { mockTopPosts } from "../data/mockTopPosts";
 import "./topCarousel.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { TopPost } from "../types/post";
 
-function getTopPosts() {
-  return mockTopPosts;
-}
+const mockPosts: TopPost[] = [
+  {
+    post_id: 1,
+    title: "데일리펀딩 블로그에 오신 것을 환영합니다 환영 환영 환영묵",
+    subtitle: "현재 게시물이 없어 임시 목업 데이터를 표시하고 있습니다.",
+    preview_image: "/carousel/sample-image.jpg",
+    category_name: "데일리 랩스",
+  },
+  {
+    post_id: 2,
+    title: "데일리펀딩 블로그에 오신 것을 환영합니다 환영 환영 환영묵",
+    subtitle: "현재 게시물이 없어 임시 목업 데이터를 표시하고 있습니다.",
+    preview_image: "/carousel/sample-image.jpg",
+    category_name: "데일리 랩스",
+  },
+];
 
 export default function TopCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const data = getTopPosts();
-  const posts = data.posts;
+  const [posts, setPosts] = useState<TopPost[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const router = useRouter();
 
@@ -33,6 +45,22 @@ export default function TopCarousel() {
       emblaApi.off("select", updateIndex);
     };
   }, [emblaApi]);
+
+  useEffect(() => {
+    const fetchTopPosts = async () => {
+      const response = await fetch("/api/top-posts");
+      const data = await response.json();
+      console.log("topPosts:", data);
+
+      if (!data.posts || data.posts.length === 0) {
+        setPosts(mockPosts);
+      } else {
+        setPosts(data.posts);
+      }
+    };
+
+    fetchTopPosts();
+  }, []);
 
   //MARK:- 나중에 지우기 (index 보기용 로그)
   console.log("currentPageIndex:", selectedIndex);
