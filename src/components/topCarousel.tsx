@@ -2,19 +2,14 @@
 "use client";
 
 import useEmblaCarousel from "embla-carousel-react";
-import { mockTopPosts } from "../data/mockTopPosts";
 import "./topCarousel.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-
-function getTopPosts() {
-  return mockTopPosts;
-}
+import { TopPost } from "../types/post";
 
 export default function TopCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const data = getTopPosts();
-  const posts = data.posts;
+  const [posts, setPosts] = useState<TopPost[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const router = useRouter();
 
@@ -33,6 +28,17 @@ export default function TopCarousel() {
       emblaApi.off("select", updateIndex);
     };
   }, [emblaApi]);
+
+  useEffect(() => {
+    const fetchTopPosts = async () => {
+      const response = await fetch("/api/top-posts");
+      const data = await response.json();
+      console.log("topPosts:", data);
+      setPosts(data.posts);
+    };
+
+    fetchTopPosts();
+  }, []);
 
   //MARK:- 나중에 지우기 (index 보기용 로그)
   console.log("currentPageIndex:", selectedIndex);
