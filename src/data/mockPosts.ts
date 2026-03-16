@@ -8,7 +8,7 @@ export const mockPostsResponse = {
       category_name: "데일리 랩스",
       title: "Next.js로 페이지 리뉴얼, 먼 미래까지 바라봐요",
       description:
-        "Next.js 기반으로 블로그 페이지를 리뉴얼하며 성능과 유지보수성을 함께 고려한 개발 경험을 공유합니다.",
+        "Next.js 기반으로 블로그 페이지를 리뉴얼하며 성능과 유지보수성을 함께 고려한 개발 경험을 공유합니다. Next.js 기반으로 블로그 페이지를 리뉴얼하며 성능과 유지보수성을 함께 고려한 개발 경험을 공유합니다.Next.js 기반으로 블로그 그르륵탁탁 다시 둥둥 ",
       preview_image:
         "https://picsum.photos/seed/post1/600/400",
     },

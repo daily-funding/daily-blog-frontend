@@ -50,6 +50,7 @@
   word-break: keep-all;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  max-lines: 4;
 }
 
 .postInfoMoreButton {
