@@ -1,0 +1,61 @@
+.article_item {
+  margin: 0 auto 77px;
+  max-width: 1046px;
+  display: flex;
+}
+
+.article_item img {
+  width: 555px;
+  height: 312px;
+  margin-right: 42px;
+}
+
+.articleCategoryBadge {
+  display: inline-block;
+  background-color: rgb(176, 177, 180);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  letter-spacing: -1.08px;
+  padding: 4px 19px;
+  margin-bottom: 5px;
+  user-select: none;
+}
+
+.post_info {
+  flex-direction: column;
+  width: 449px;
+  height: 312px;
+}
+
+.postInfoTitle {
+  display: block;
+  color: rgb(48, 48, 48);
+  font-size: 28px;
+  line-height: 37px;
+  letter-spacing: -1.68px;
+  margin-bottom: 17px;
+  word-break: keep-all;
+  cursor: pointer;
+}
+
+.postInfoDescription {
+  color: rgb(48, 48, 48);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: -1.08px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.postInfoMoreButton {
+  display: inline-block;
+  color: rgb(48, 48, 48);
+  font-size: 18px;
+  letter-spacing: -1.08px;
+  cursor: pointer;
+}

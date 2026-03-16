@@ -4,6 +4,7 @@
 
 :root {
   --background: #ffffff;
+  --foreground: #000000;
 }
 
 @theme inline {
@@ -13,12 +14,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #000000;
   }
-} */
+}
 
 body {
   background: var(--background);
