@@ -3,6 +3,7 @@ import TopCarousel from "./components/topCarousel";
 import UpButton from "@/src/components/upButton";
 import "./home.css";
 import PostItem from "./components/postItem";
+import PostList from "./components/postList";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <TopCarousel />
       <div className="postSection">
         <CategoryButton />
-        <PostItem />
+        <PostList />
       </div>
       <UpButton />
     </div>

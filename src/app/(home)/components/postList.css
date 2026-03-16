@@ -2,12 +2,28 @@
   margin: 0 auto 77px;
   max-width: 1046px;
   display: flex;
+  overflow: hidden;
 }
 
 .article_item img {
   width: 555px;
   height: 312px;
   margin-right: 42px;
+  object-fit: cover;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.article_item img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1) saturate(1.1);
+}
+
+.post_info {
+  flex-direction: column;
+  width: 449px;
+  height: 312px;
 }
 
 .articleCategoryBadge {
@@ -19,12 +35,6 @@
   padding: 4px 19px;
   margin-bottom: 5px;
   user-select: none;
-}
-
-.post_info {
-  flex-direction: column;
-  width: 449px;
-  height: 312px;
 }
 
 .postInfoTitle {
@@ -50,7 +60,9 @@
   word-break: keep-all;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  max-lines: 4;
+
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
 }
 
 .postInfoMoreButton {
