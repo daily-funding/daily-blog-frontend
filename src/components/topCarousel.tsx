@@ -7,6 +7,23 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { TopPost } from "../types/post";
 
+const mockPosts: TopPost[] = [
+  {
+    post_id: 1,
+    title: "데일리펀딩 블로그에 오신 것을 환영합니다 환영 환영 환영묵",
+    subtitle: "현재 게시물이 없어 임시 목업 데이터를 표시하고 있습니다.",
+    preview_image: "/carousel/sample-image.jpg",
+    category_name: "데일리 랩스",
+  },
+  {
+    post_id: 2,
+    title: "데일리펀딩 블로그에 오신 것을 환영합니다 환영 환영 환영묵",
+    subtitle: "현재 게시물이 없어 임시 목업 데이터를 표시하고 있습니다.",
+    preview_image: "/carousel/sample-image.jpg",
+    category_name: "데일리 랩스",
+  },
+];
+
 export default function TopCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [posts, setPosts] = useState<TopPost[]>([]);
@@ -34,7 +51,12 @@ export default function TopCarousel() {
       const response = await fetch("/api/top-posts");
       const data = await response.json();
       console.log("topPosts:", data);
-      setPosts(data.posts);
+
+      if (!data.posts || data.posts.length === 0) {
+        setPosts(mockPosts);
+      } else {
+        setPosts(data.posts);
+      }
     };
 
     fetchTopPosts();

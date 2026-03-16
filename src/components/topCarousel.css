@@ -159,3 +159,182 @@
 .topCarousel:focus-within .topCarouselNavButton button {
   pointer-events: auto;
 }
+
+@media (max-width: 1200px) {
+  .topCarousel {
+    height: 814px;
+  }
+
+  .title {
+    font-size: 44px;
+    line-height: 66px;
+
+    max-width: 878px;
+    margin: 0px 0px 20px;
+    padding: 0 140px;
+  }
+
+  .category_badge {
+    font-size: 20px;
+
+    padding: 3px 26px 5px;
+    margin: 0 0 25px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .topCarouselNavButton img {
+    width: 63px;
+    height: 63px;
+  }
+
+  .topCarouselIndicator {
+    bottom: 30px;
+    transform: translateX(-50%);
+  }
+
+  .topCarouselIndicator button.active {
+    background-color: #ffffff;
+    width: 9px;
+    height: 9px;
+    margin: 0px 6px;
+  }
+
+  .topCarouselIndicator button {
+    width: 9px;
+    height: 9px;
+    margin: 0px 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topCarousel {
+    height: 580px;
+  }
+  .topCarouselTextSection {
+    transform: translateY(0%);
+  }
+
+  .title {
+    font-size: 35px;
+    line-height: 45px;
+
+    max-width: 878px;
+    margin: 0px 0px 20px;
+    padding: 0 80px;
+  }
+
+  .category_badge {
+    font-size: 14px;
+
+    padding: 4px 14px;
+    margin: 0 0 10px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    line-height: 19.5px;
+
+    letter-spacing: -0.66px;
+  }
+
+  .topCarouselNavButton img {
+    width: 63px;
+    height: 63px;
+  }
+
+  .topCarouselIndicator {
+    bottom: 30px;
+  }
+
+  .topCarouselIndicator button.active {
+    background-color: #ffffff;
+    width: 9px;
+    height: 9px;
+    margin: 0px 6px;
+  }
+
+  .topCarouselIndicator button {
+    width: 9px;
+    height: 9px;
+    margin: 0px 6px;
+  }
+
+  .topCarousel:hover .topCarouselNavButton,
+  .topCarousel:focus-within .topCarouselNavButton {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .topCarousel {
+    position: relative;
+    width: 100%;
+    height: 427px;
+  }
+
+  .topCarouselTextSection {
+    height: 181px;
+    padding: 0 26px;
+    align-items: start;
+
+    transform: translateY(165px);
+  }
+
+  .title {
+    font-size: 31px;
+    line-height: 39px;
+
+    max-width: 878px;
+    margin: 0px 0px 10px;
+    padding: 0px 0px;
+    text-align: left;
+  }
+
+  .category_badge {
+    font-size: 12px;
+
+    padding: 4px 14px;
+    margin: 0 0 10px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    line-height: 16.5px;
+
+    letter-spacing: -0.66px;
+
+    text-align: left;
+  }
+
+  .topCarouselNavButton img {
+    width: 0px;
+    height: 0px;
+  }
+
+  .topCarouselIndicator {
+    left: 0%;
+    bottom: 0px;
+    transform: translateX(0%);
+    padding: 0 0 23px 26px;
+  }
+
+  .topCarouselIndicator button.active {
+    width: 8px;
+    height: 8px;
+    margin: 0px 4px;
+  }
+
+  .topCarouselIndicator button {
+    width: 8px;
+    height: 8px;
+    margin: 0px 4px;
+  }
+
+  .topCarousel:hover .topCarouselNavButton,
+  .topCarousel:focus-within .topCarouselNavButton {
+    opacity: 0;
+  }
+}
