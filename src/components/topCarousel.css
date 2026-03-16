@@ -278,7 +278,7 @@
   .topCarouselTextSection {
     height: 181px;
     padding: 0 26px;
-    align-items: start;
+    align-items: flex-start;
 
     transform: translateY(165px);
   }
@@ -310,8 +310,7 @@
   }
 
   .topCarouselNavButton img {
-    width: 0px;
-    height: 0px;
+    display: none;
   }
 
   .topCarouselIndicator {
