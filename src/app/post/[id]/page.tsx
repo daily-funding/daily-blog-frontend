@@ -3,6 +3,7 @@ import TopPost from "./components/topPost";
 import PostContent from "./components/postContent";
 import "./style.css";
 import DailyTogether from "./components/dailyTogether";
+import AnotherInsight from "./components/anotherInsight";
 
 export default async function PostDetail({
   params,
@@ -23,6 +24,7 @@ export default async function PostDetail({
       <TopPost post={post} />
       <PostContent />
       <DailyTogether />
+      <AnotherInsight />
     </div>
   );
 }
