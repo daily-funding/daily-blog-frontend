@@ -1,7 +1,7 @@
 import { API_URLS } from "@/src/constants/api";
 import TopPost from "./components/topPost";
 import PostContent from "./components/postContent";
-import "./style.css"
+import "./style.css";
 
 export default async function PostDetail({
   params,
@@ -11,12 +11,15 @@ export default async function PostDetail({
   const { id } = await params;
 
   const response = await fetch(`${API_URLS.posts}${id}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch post: ${response.status}`);
+  }
   const post = await response.json();
   console.log(post);
 
   return (
     <div className="postPage">
-      <TopPost post={post}/>
+      <TopPost post={post} />
       <PostContent />
     </div>
   );

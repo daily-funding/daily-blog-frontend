@@ -8,7 +8,7 @@ export default function TopPost({ post } : TopPostProps) {
   return (
     <div className="topPost">
       <div className="topPostTrack">
-        <div className="topPostSlide" key={post.post_id}>
+        <div className="topPostSlide">
           <img src={post.preview_image} alt="" />
           <div className="topPostTextSection">
             <p className="category_badge">{post.category_name}</p>

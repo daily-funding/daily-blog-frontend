@@ -47,7 +47,7 @@
   transform: translateY(-15px);
 }
 
-.category_badge {
+.topPost .category_badge {
   display: inline-block;
 
   font-family: "Noto Sans KR", AppleGothic, Dotum, sans-serif;
@@ -65,7 +65,7 @@
   box-sizing: border-box;
 }
 
-.title {
+.topPost .title {
   display: block;
 
   font-family: "Noto Sans KR", AppleGothic, Dotum, sans-serif;
@@ -84,7 +84,7 @@
   user-select: none;
 }
 
-.subtitle {
+.topPost .subtitle {
   display: block;
 
   font-family: "Noto Sans KR", AppleGothic, Dotum, sans-serif;
@@ -118,7 +118,7 @@
     height: 814px;
   }
 
-  .title {
+  .topPost .title {
     font-size: 44px;
     line-height: 66px;
 
@@ -127,14 +127,14 @@
     padding: 0 140px;
   }
 
-  .category_badge {
+  .topPost .category_badge {
     font-size: 20px;
 
     padding: 3px 26px 5px;
     margin: 0 0 25px;
   }
 
-  .subtitle {
+  .topPost .subtitle {
     font-size: 17px;
   }
 }
@@ -147,7 +147,7 @@
     transform: translateY(0%);
   }
 
-  .title {
+  .topPost .title {
     font-size: 35px;
     line-height: 45px;
 
@@ -156,14 +156,14 @@
     padding: 0 80px;
   }
 
-  .category_badge {
+  .topPost .category_badge {
     font-size: 14px;
 
     padding: 4px 14px;
     margin: 0 0 10px;
   }
 
-  .subtitle {
+  .topPost .subtitle {
     font-size: 13px;
     line-height: 19.5px;
 
@@ -189,7 +189,8 @@
 
 @media (max-width: 414px) {
   .topPost {
-    position: relative;
+    position: sticky;
+  top: 0;
     width: 100%;
     height: 427px;
   }
@@ -202,7 +203,7 @@
     transform: translateY(165px);
   }
 
-  .title {
+  .topPost .title {
     font-size: 31px;
     line-height: 39px;
 
@@ -212,14 +213,14 @@
     text-align: left;
   }
 
-  .category_badge {
+  .topPost .category_badge {
     font-size: 12px;
 
     padding: 4px 14px;
     margin: 0 0 10px;
   }
 
-  .subtitle {
+  .topPost .subtitle {
     font-size: 11px;
     line-height: 16.5px;
 
