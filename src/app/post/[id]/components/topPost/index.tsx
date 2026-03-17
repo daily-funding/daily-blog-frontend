@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import "./style.css";
@@ -27,28 +28,20 @@ export default function TopPost() {
   }, []);
 
   return (
-    <div className="topCarousel">
+    <div className="topPost">
       <div className="topCarouselTrack">
         {posts.map((post) => (
-          <div className="topCarouselSlide" key={post.post_id}>
+          <div className="topPostSlide" key={post.post_id}>
             <img src={post.preview_image} alt="" />
-            <div className="topCarouselTextSection">
+            <div className="topPostTextSection">
               <p className="category_badge">{post.category.name}</p>
-              <button
-                type="button"
-                className="topCarouselPostLink"
-                onClick={() => {
-                  router.push(`/post/${post.post_id}`);
-                }}
-              >
-                <h1 className="title">{post.title}</h1>
-                <p className="subtitle">{post.subtitle}</p>
-              </button>
+              <h1 className="title">{post.title}</h1>
+              <p className="subtitle">{post.subtitle}</p>
             </div>
           </div>
         ))}
       </div>
-      <div className="topCarouselIndicator">
+      <div className="topPostLogo">
         <img src="/daily-funding-logo.png" alt="" />
       </div>
     </div>

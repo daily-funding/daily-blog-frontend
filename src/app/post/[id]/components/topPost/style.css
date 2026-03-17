@@ -1,0 +1,228 @@
+.topPost {
+  position: relative;
+  width: 100%;
+  height: 814px;
+  overflow: hidden;
+}
+.topPostSlide::after {
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.topPostSlide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.topPostTrack {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.topPostSlide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+}
+
+.topPostTextSection {
+  z-index: 2;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(-15px);
+}
+
+.category_badge {
+  display: inline-block;
+
+  font-family: "Noto Sans KR", AppleGothic, Dotum, sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: -1.38px;
+  color: rgb(255, 255, 255);
+
+  padding: 3px 26px 5px;
+  margin-bottom: 18px;
+
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 22px;
+
+  box-sizing: border-box;
+}
+
+.title {
+  display: block;
+
+  font-family: "Noto Sans KR", AppleGothic, Dotum, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: -2.88px;
+  color: #ffffff;
+
+  max-width: 878px;
+  margin: 0 175px 22px;
+
+  text-align: center;
+  word-break: keep-all;
+
+  user-select: none;
+}
+
+.subtitle {
+  display: block;
+
+  font-family: "Noto Sans KR", AppleGothic, Dotum, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -1.2px;
+  color: #ffffff;
+
+  text-align: center;
+  word-break: keep-all;
+
+  user-select: none;
+}
+
+.topPostLogo {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  bottom: 41px;
+  transform: translateX(-50%);
+
+  vertical-align: bottom;
+
+  width: 120px;
+  height: 21px;
+}
+
+@media (max-width: 1200px) {
+  .topPost {
+    height: 814px;
+  }
+
+  .title {
+    font-size: 44px;
+    line-height: 66px;
+
+    max-width: 878px;
+    margin: 0px 0px 20px;
+    padding: 0 140px;
+  }
+
+  .category_badge {
+    font-size: 20px;
+
+    padding: 3px 26px 5px;
+    margin: 0 0 25px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topPost {
+    height: 580px;
+  }
+  .topPostTextSection {
+    transform: translateY(0%);
+  }
+
+  .title {
+    font-size: 35px;
+    line-height: 45px;
+
+    max-width: 878px;
+    margin: 0px 0px 20px;
+    padding: 0 80px;
+  }
+
+  .category_badge {
+    font-size: 14px;
+
+    padding: 4px 14px;
+    margin: 0 0 10px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    line-height: 19.5px;
+
+    letter-spacing: -0.66px;
+  }
+
+  .topPostLogo {
+    left: 43px;
+    bottom: 36px;
+    transform: translateX(0%);
+
+    width: 86px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 660px) {
+  .topPostLogo {
+    left: 26px;
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 414px) {
+  .topPost {
+    position: relative;
+    width: 100%;
+    height: 427px;
+  }
+
+  .topPostTextSection {
+    height: 181px;
+    padding: 0 26px;
+    align-items: flex-start;
+
+    transform: translateY(165px);
+  }
+
+  .title {
+    font-size: 31px;
+    line-height: 39px;
+
+    max-width: 878px;
+    margin: 0px 0px 10px;
+    padding: 0px 0px;
+    text-align: left;
+  }
+
+  .category_badge {
+    font-size: 12px;
+
+    padding: 4px 14px;
+    margin: 0 0 10px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    line-height: 16.5px;
+
+    letter-spacing: -0.66px;
+
+    text-align: left;
+  }
+}
