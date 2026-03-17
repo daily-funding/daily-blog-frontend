@@ -18,7 +18,7 @@ export default function TopPost({ post } : TopPostProps) {
         </div>
       </div>
       <div className="topPostLogo">
-        <img src="/daily-funding-logo.png" alt="" />
+        <img src="/post/daily-funding-logo.png" alt="" />
       </div>
     </div>
   );
