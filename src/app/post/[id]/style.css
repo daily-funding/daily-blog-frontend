@@ -1,11 +1,16 @@
 .topPost {
   position: sticky;
   top: 0;
-  height: 100vh;
   z-index: 1;
 }
 
 .postContent {
+  position: relative;
+  z-index: 2;
+  background: white;
+}
+
+.dailianBanner {
   position: relative;
   z-index: 2;
   background: white;
