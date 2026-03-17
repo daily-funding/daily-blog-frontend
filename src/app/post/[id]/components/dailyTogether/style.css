@@ -1,6 +1,5 @@
 .dailianBanner {
   position: relative;
-  z-index: 1;
   overflow: hidden;
 
   width: 100%;
@@ -44,7 +43,7 @@
   font-family: "Noto Sans KR", AppleGothic, Dotum, sans-serif;
   font-size: 21px;
   font-weight: 400;
-  height: 30px;
+  min-height: 30px;
   margin: 0 0 16px;
   text-align: center;
   user-select: none;
@@ -72,7 +71,7 @@
   .dailianTextSection p {
     font-size: 18px;
     width: 252px;
-    height: 52px;
+    min-height: 52px;
     margin: 0 0 5px;
     word-break: keep-all;
   }
@@ -91,7 +90,7 @@
   .dailianTextSection p {
     font-size: 15px;
     width: 210px;
-    height: 42px;
+    min-height: 42px;
     margin: 0 0 2px;
     word-break: keep-all;
   }
