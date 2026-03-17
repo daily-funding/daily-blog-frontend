@@ -1,0 +1,15 @@
+.postSection {
+    padding: 81px 0px 70px;
+}
+
+@media (max-width:1200px) {
+    .postSection {
+        padding: 60px 40px
+    }
+}
+
+@media (max-width:768px) {
+    .postSection {
+        padding: 40px 40px 50px
+    }
+}
