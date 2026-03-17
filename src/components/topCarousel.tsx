@@ -62,9 +62,6 @@ export default function TopCarousel() {
     fetchTopPosts();
   }, []);
 
-  //MARK:- 나중에 지우기 (index 보기용 로그)
-  console.log("currentPageIndex:", selectedIndex);
-
   return (
     <div className="topCarousel" ref={emblaRef}>
       <div className="topCarouselTrack">

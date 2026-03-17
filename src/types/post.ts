@@ -8,12 +8,14 @@ export interface TopPost {
 
 export interface DetailTopPost {
   post_id: number;
-  category: {
-    id: number;
-    name: string;
-  };
+  category_id: number;
+  category_name: string;
   title: string;
   subtitle: string;
   content: string;
   preview_image: string;
 }
+
+export type TopPostProps = {
+  post: DetailTopPost;
+};
