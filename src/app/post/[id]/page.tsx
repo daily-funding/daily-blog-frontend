@@ -2,6 +2,7 @@ import { API_URLS } from "@/src/constants/api";
 import TopPost from "./components/topPost";
 import PostContent from "./components/postContent";
 import "./style.css";
+import DailyTogether from "./components/dailyTogether";
 
 export default async function PostDetail({
   params,
@@ -21,6 +22,7 @@ export default async function PostDetail({
     <div className="postPage">
       <TopPost post={post} />
       <PostContent />
+      <DailyTogether />
     </div>
   );
 }
