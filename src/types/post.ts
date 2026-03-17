@@ -19,3 +19,8 @@ export interface DetailTopPost {
 export type TopPostProps = {
   post: DetailTopPost;
 };
+
+export type Category = {
+  category_id: number;
+  name: string;
+};
