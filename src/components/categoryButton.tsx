@@ -18,6 +18,10 @@ export default function CategoryButton() {
     async function fetchCategories() {
       try {
         const response = await fetch("/api/categories");
+        if (!response.ok) {
+          setCategories([ALL_CATEGORY]);
+          return;
+        }
         const data = await response.json();
         const fetchedCategories: Category[] = Array.isArray(data.categories)
           ? data.categories
@@ -27,6 +31,7 @@ export default function CategoryButton() {
 
         setCategories(categoriesWithAll);
       } catch (error) {
+        setCategories([ALL_CATEGORY]);
         console.error("Failed to fetch categories:", error);
       }
     }
