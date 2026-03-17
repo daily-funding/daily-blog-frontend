@@ -26,3 +26,8 @@ export type InsightItemProps ={
   title: string;
   preview_image: string;
 };
+
+export type Category = {
+  category_id: number;
+  name: string;
+};
