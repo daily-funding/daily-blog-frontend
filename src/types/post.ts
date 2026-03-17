@@ -19,3 +19,10 @@ export interface DetailTopPost {
 export type TopPostProps = {
   post: DetailTopPost;
 };
+
+export type InsightItemProps ={
+  post_id: number;
+  category_name: string;
+  title: string;
+  preview_image: string;
+};
