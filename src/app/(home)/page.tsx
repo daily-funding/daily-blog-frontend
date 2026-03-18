@@ -4,13 +4,16 @@ import UpButton from "@/src/components/upButton";
 import "./home.css";
 import PostItem from "./components/postItem";
 import PostList from "./components/postList";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
     <div className="home">
       <TopCarousel />
       <div className="postSection">
-        <CategoryButton />
+        <Suspense fallback={null}>
+          <CategoryButton />
+        </Suspense>
         <PostList />
       </div>
       <UpButton />

@@ -1,0 +1,62 @@
+export const mockDetailPost = {
+  posts: [
+    {
+      post_id: 1,
+      category: {
+        id: 1,
+        name: "데일리 랩스",
+      },
+      title: "Next.js 기반으로 데일리펀딩 블로그 리뉴얼하기",
+      subtitle:
+        "기존 블로그 구조를 분석하고 현대적인 프론트엔드 스택으로 재구현한 이야기",
+      preview_image: "/carousel/sample-image.jpg",
+      content: `
+  <p>데일리펀딩 블로그 리뉴얼 프로젝트는 기존 서비스의 구조를 분석하고, 더 나은 사용자 경험을 제공하기 위해 시작되었습니다.</p>
+
+  <h2>프로젝트 목표</h2>
+  <p>이번 리뉴얼의 주요 목표는 다음과 같습니다.</p>
+  <ul>
+    <li>Next.js 기반의 현대적인 프론트엔드 구조 도입</li>
+    <li>반응형 UI 개선</li>
+    <li>콘텐츠 가독성 향상</li>
+    <li>페이지 로딩 속도 최적화</li>
+  </ul>
+
+  <h2>기술 스택</h2>
+  <p>이번 프로젝트에서는 다음과 같은 기술 스택을 사용했습니다.</p>
+  <ul>
+    <li>Next.js</li>
+    <li>React</li>
+    <li>TypeScript</li>
+    <li>CSS Modules</li>
+  </ul>
+
+  <blockquote>
+    좋은 프론트엔드는 단순히 화면을 만드는 것이 아니라, 사용자 경험을 설계하는 일입니다.
+  </blockquote>
+
+  <h2>예시 이미지</h2>
+  <p>아래 이미지는 이번 리뉴얼에서 적용된 UI 디자인의 예시입니다.</p>
+
+  <img src=\"/carousel/sample-image.jpg\" alt=\"UI Example\" />
+
+  <p>이미지 아래에는 추가적인 설명을 넣을 수도 있습니다. 콘텐츠 작성자는 HTML 태그를 활용해 다양한 형태의 글을 작성할 수 있습니다.</p>
+
+  <h3>코드 예시</h3>
+  <pre><code>
+const fetchPosts = async () => {
+  const res = await fetch('/api/posts');
+  const data = await res.json();
+  return data;
+};
+  </code></pre>
+
+  <p>이처럼 코드 블록도 콘텐츠 안에서 표현할 수 있습니다.</p>
+
+  <hr />
+
+  <p>이번 블로그 리뉴얼을 통해 데일리펀딩의 다양한 이야기와 기술적인 경험을 더 많은 사람들과 공유할 수 있기를 기대합니다.</p>
+  `,
+    },
+  ],
+};
