@@ -24,6 +24,13 @@ export type Post = {
   preview_image: string;
 }
 
+export type PostListResponse = {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: Post[];
+};
+
 export type TopPostProps = {
   post: DetailTopPost;
 };

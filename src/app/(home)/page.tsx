@@ -2,7 +2,7 @@ import CategoryButton from "@/src/app/(home)/components/categoryButton";
 import TopCarousel from "./components/topCarousel";
 import UpButton from "@/src/components/upButton";
 import "./home.css";
-import PostList from "./components/postList";
+import PostList from "./components/post/postList";
 import { Suspense } from "react";
 
 export default function Home() {
