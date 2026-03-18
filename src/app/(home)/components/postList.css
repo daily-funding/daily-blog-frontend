@@ -78,6 +78,32 @@
   cursor: pointer;
 }
 
+.morePostButton {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-wrap: wrap;
+  cursor: pointer;
+  align-items: center;
+}
+
+.morePostButton p {
+  color: rgb(116, 116, 116);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -1.38px;
+  text-align: center;
+  width: 100%;
+}
+
+.morePostButton img {
+  width: 14px;
+  height: 7.7px;
+}
+
 @media (max-width: 1200px) {
   .article_item {
     margin: 0 auto 77px;
@@ -133,7 +159,7 @@
     width: 100%;
     max-width: none;
     height: 204px;
-    margin:0;
+    margin: 0;
     margin-bottom: 20px;
     object-position: center;
   }
