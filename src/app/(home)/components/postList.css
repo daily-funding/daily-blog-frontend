@@ -125,9 +125,7 @@
     max-width: 600px;
     flex-direction: column;
     flex-wrap: wrap;
-    transition:
-      transform 0s ease,
-      filter 0s ease;
+    transition: none;
   }
 
   .article_item img {
