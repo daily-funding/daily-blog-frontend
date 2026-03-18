@@ -4,6 +4,7 @@ import PostContent from "./components/postContent";
 import "./style.css";
 import DailyTogether from "./components/dailyTogether";
 import AnotherInsight from "./components/anotherInsight";
+import { Suspense } from "react";
 
 export default async function PostDetail({
   params,
@@ -24,7 +25,9 @@ export default async function PostDetail({
       <TopPost post={post} />
       <PostContent />
       <DailyTogether />
-      <AnotherInsight id={id} />
+      <Suspense fallback={null}>
+        <AnotherInsight id={id} />
+      </Suspense>
     </div>
   );
 }
