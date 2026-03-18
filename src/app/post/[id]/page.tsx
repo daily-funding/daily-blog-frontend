@@ -24,7 +24,7 @@ export default async function PostDetail({
       <TopPost post={post} />
       <PostContent />
       <DailyTogether />
-      <AnotherInsight />
+      <AnotherInsight id={id} />
     </div>
   );
 }
