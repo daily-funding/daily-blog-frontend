@@ -1,6 +1,7 @@
 import { PostListResponse } from "@/src/types/post";
 import { API_URLS } from "@/src/constants/api";
 import PostListClient from "./postListClient";
+import { Suspense } from "react";
 
 export default async function PostList() {
   const response = await fetch(API_URLS.posts, {
@@ -13,5 +14,9 @@ export default async function PostList() {
 
   const data: PostListResponse = await response.json();
 
-  return <PostListClient initialData={data} />;
+  return (
+    <Suspense>
+      <PostListClient initialData={data} />;
+    </Suspense>
+  );
 }
