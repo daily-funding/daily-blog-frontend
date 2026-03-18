@@ -4,6 +4,7 @@
   height: 814px;
   overflow: hidden;
 }
+
 .topCarouselSlide::after {
   z-index: 1;
   pointer-events: none;
