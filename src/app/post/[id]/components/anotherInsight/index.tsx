@@ -2,6 +2,7 @@ import { API_URLS } from "@/src/constants/api";
 import InsightItem from "./components/insightItem";
 import styles from "./style.module.css";
 import { InsightItemProps } from "@/src/types/post";
+import InsightCardSection from "./components/insightCardSection";
 
 type InsightResponse = {
   posts: InsightItemProps[];
@@ -20,13 +21,7 @@ export default async function AnotherInsight({ id }: { id: string }) {
     <section className={styles.anotherInsightSection}>
       <div className={styles.anotherInsight}>
         <p className={styles.title}>또 다른 인사이트</p>
-        <div className={styles.temptemp}>
-          {InsightData.posts.map((insight) => (
-            <div key={insight.post_id}>
-              <InsightItem insight={insight} />
-            </div>
-          ))}
-        </div>
+        <InsightCardSection posts={InsightData.posts} />
       </div>
     </section>
   );

@@ -19,17 +19,3 @@ export default function InsightItem({
     </div>
   );
 }
-
-// export default function InsightItem() {
-//   return (
-//     <div className={styles.insightItem}>
-//       <img src="/post/dailian-back.png" alt="" />
-//       <div className={styles.black_back}>
-//         <span>USER TALK</span>
-//       </div>
-//       <div className={styles.info_div}>
-//         <p>로깅 레이어, 이슈 해결과 고객 이해를 위해 해해햏해해</p>
-//       </div>
-//     </div>
-//   );
-// }
