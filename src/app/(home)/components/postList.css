@@ -118,3 +118,66 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 768px) {
+  .article_item {
+    margin: 0 auto 53px;
+    max-width: 600px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition:
+      transform 0s ease,
+      filter 0s ease;
+  }
+
+  .article_item img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 204px;
+    margin:0;
+    margin-bottom: 20px;
+    object-position: center;
+  }
+
+  .article_item img:hover {
+    transform: none;
+    filter: none;
+  }
+
+  .post_info {
+    width: auto;
+    height: auto;
+  }
+
+  .articleCategoryBadge {
+    display: inline-block;
+    font-size: 13px;
+    padding: 3px 8px;
+    letter-spacing: -0.78px;
+    margin-bottom: 5px;
+  }
+
+  .postInfoTitle {
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: -1.26px;
+    margin-bottom: 9px;
+  }
+
+  .postInfoDescription {
+    font-size: 13px;
+    line-height: 21px;
+    letter-spacing: -0.78px;
+    margin-bottom: 7px;
+    margin-block-end: 7px;
+
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+  }
+
+  .postInfoMoreButton {
+    font-size: 14px;
+    letter-spacing: -0.84px;
+  }
+}
