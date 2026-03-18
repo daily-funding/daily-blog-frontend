@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./categoryButton.css";
 import Link from "next/link";
 import { Category } from "../types/post";
@@ -13,6 +13,7 @@ const ALL_CATEGORY: Category = {
 
 export default function CategoryButton() {
   const [categories, setCategories] = useState<Category[]>([]);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     async function fetchCategories() {
@@ -41,8 +42,15 @@ export default function CategoryButton() {
   const searchParams = useSearchParams();
   const currentCategoryId = Number(searchParams.get("category_id")) || 0;
 
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [currentCategoryId]);
+
   return (
-    <div className="categorySection">
+    <div ref={sectionRef} className="categorySection">
       {categories.map((category) => {
         const href =
           category.category_id === 0
