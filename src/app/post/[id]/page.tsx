@@ -13,7 +13,7 @@ export default async function PostDetail({
 }) {
   const { id } = await params;
 
-  const response = await fetch(`${API_URLS.posts}${id}`);
+  const response = await fetch(`${API_URLS.posts}${id}/`);
   if (!response.ok) {
     throw new Error(`Failed to fetch post: ${response.status}`);
   }
