@@ -9,16 +9,26 @@ import { Suspense } from "react";
 export default async function PostDetail({
   params,
 }: {
-  params: Promise<{ id: string }>; //Next가 page를 streaming & async rendering으로 처리한다. page가 async server component일 수 있기 때문에 params를 Promise로 전달한다.
+  params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  const url = `${API_URLS.posts}${id}`;
 
-  const response = await fetch(`${API_URLS.posts}${id}`);
+  console.log("[PostDetail] request url:", url);
+
+  const response = await fetch(url, { cache: "no-store" });
+
+  console.log("[PostDetail] status:", response.status);
+  console.log("[PostDetail] content-type:", response.headers.get("content-type"));
+
+  const rawText = await response.text();
+  console.log("[PostDetail] raw body:", rawText.slice(0, 300));
+
   if (!response.ok) {
     throw new Error(`Failed to fetch post: ${response.status}`);
   }
-  const post = await response.json();
-  console.log(post);
+
+  const post = JSON.parse(rawText);
 
   return (
     <div className="postPage">
