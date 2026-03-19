@@ -12,5 +12,9 @@ export default async function PostDetail({
   params: { id: string };
 }) {
   const { id } = params;
-  return <div>id: {id}</div>;
+  const response = await fetch(`${API_URLS.posts}${id}`, {
+    cache: "no-store",
+  });
+
+  return <div>status: {response.status}</div>;
 }
