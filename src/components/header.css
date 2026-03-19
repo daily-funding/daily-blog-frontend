@@ -22,6 +22,7 @@
 .headerBackButton {
   width: 20px;
   height: 37px;
+  cursor: pointer;
 }
 
 .headerDailyFundingLink {
