@@ -15,6 +15,7 @@
     filter 0.3s ease;
   cursor: pointer;
   background-color: darkgray;
+  filter: brightness(0.8);
 }
 
 .article_item img:hover {
@@ -162,6 +163,7 @@
     margin: 0;
     margin-bottom: 20px;
     object-position: center;
+    filter: none;
   }
 
   .article_item img:hover {
