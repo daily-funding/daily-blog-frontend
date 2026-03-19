@@ -5,7 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import "./topCarousel.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { TopPost } from "../types/post";
+import { TopPost } from "@/src/types/post";
 
 const mockPosts: TopPost[] = [
   {

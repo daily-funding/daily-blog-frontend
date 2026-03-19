@@ -5,6 +5,7 @@ if (!BASE_URL) {
 }
 
 export const API_URLS = {
+  basic: `${BASE_URL}/`,
   topPosts: `${BASE_URL}/posts/top/`,
   posts: `${BASE_URL}/posts/`,
   categories: `${BASE_URL}/categories/`,

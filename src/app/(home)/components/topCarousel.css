@@ -4,6 +4,7 @@
   height: 814px;
   overflow: hidden;
 }
+
 .topCarouselSlide::after {
   z-index: 1;
   pointer-events: none;
@@ -80,6 +81,7 @@
   word-break: keep-all;
 
   user-select: none;
+  cursor: pointer;
 }
 
 .subtitle {
@@ -96,6 +98,7 @@
   word-break: keep-all;
 
   user-select: none;
+  cursor: pointer;
 }
 
 .topCarouselIndicator {
@@ -113,6 +116,7 @@
   height: 11px;
   opacity: 0.8;
   margin: 0px 8px;
+  cursor: pointer;
 }
 
 .topCarouselIndicator button {
@@ -122,6 +126,7 @@
   height: 11px;
   opacity: 0.3;
   margin: 0px 8px;
+  cursor: pointer;
 }
 
 .topCarouselNavButton {
@@ -143,6 +148,7 @@
 
 .topCarouselNavButton button {
   pointer-events: none;
+  cursor: pointer;
 }
 
 .topCarouselNavButton img {
