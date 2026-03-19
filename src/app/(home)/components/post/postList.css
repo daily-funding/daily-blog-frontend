@@ -22,7 +22,6 @@
 }
 
 .post_info {
-  flex-direction: column;
   width: 449px;
   height: 312px;
 }

@@ -1,6 +1,6 @@
-import CategoryButton from "@/src/app/(home)/components/categoryButton";
+import CategoryButton from "./components/categoryButton";
 import TopCarousel from "./components/topCarousel";
-import UpButton from "@/src/components/upButton";
+import UpButton from "../../components/upButton";
 import "./home.css";
 import PostList from "./components/post/postList";
 import { Suspense } from "react";
@@ -13,7 +13,9 @@ export default function Home() {
         <Suspense fallback={null}>
           <CategoryButton />
         </Suspense>
-        <PostList />
+        <Suspense fallback={null}>
+          <PostList />
+        </Suspense>
       </div>
       <UpButton />
     </div>

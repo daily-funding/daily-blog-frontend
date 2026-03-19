@@ -1,10 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { PostListResponse } from "@/src/types/post";
 import PostItem from "./postItem";
 import { useEffect, useState } from "react";
-import { API_URLS } from "@/src/constants/api";
 import { useSearchParams } from "next/navigation";
 
 type PostListClientProps = {
@@ -24,17 +24,25 @@ export default function PostListClient({ initialData }: PostListClientProps) {
 
     const fetchMorePost = async () => {
       setIsLoading(true);
-      const response = await fetch(`/api/post?page=${page}&category_id=${currentCategoryId}`);
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch post data");
+      try {
+        const response = await fetch(
+          `/api/post?page=${page}&category_id=${currentCategoryId}`,
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch post data");
+        }
+
+        const data: PostListResponse = await response.json();
+
+        setPosts((prev) => [...prev, ...data.results]);
+        setNext(data.next);
+      } catch (error) {
+        console.error("Error etching post", error);
+      } finally {
+        setIsLoading(false);
       }
-
-      const data: PostListResponse = await response.json();
-
-      setPosts((prev) => [...prev, ...data.results]);
-      setNext(data.next);
-      setIsLoading(false);
     };
 
     fetchMorePost();
@@ -44,17 +52,25 @@ export default function PostListClient({ initialData }: PostListClientProps) {
     setPage(1);
     const fetchMorePost = async () => {
       setIsLoading(true);
-      const response = await fetch(`/api/post?page=1&category_id=${currentCategoryId}`);
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch post data");
+      try {
+        const response = await fetch(
+          `/api/post?page=1&category_id=${currentCategoryId}`,
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch post data");
+        }
+
+        const data: PostListResponse = await response.json();
+
+        setPosts(data.results);
+        setNext(data.next);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      } finally {
+        setIsLoading(false);
       }
-
-      const data: PostListResponse = await response.json();
-
-      setPosts(data.results);
-      setNext(data.next);
-      setIsLoading(false);
     };
 
     fetchMorePost();

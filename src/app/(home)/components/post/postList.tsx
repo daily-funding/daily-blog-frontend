@@ -16,7 +16,7 @@ export default async function PostList() {
 
   return (
     <Suspense>
-      <PostListClient initialData={data} />;
+      <PostListClient initialData={data} />
     </Suspense>
   );
 }
