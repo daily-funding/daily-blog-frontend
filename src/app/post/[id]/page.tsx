@@ -23,7 +23,7 @@ export default async function PostDetail({
   return (
     <div className="postPage">
       <TopPost post={post} />
-      <PostContent />
+      <PostContent content={post.content} />
       <DailyTogether />
       <Suspense fallback={null}>
         <AnotherInsight id={id} />
