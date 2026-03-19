@@ -50,13 +50,18 @@
   cursor: pointer;
 }
 
-.insightItem img {
-  max-height: 186px;
+.image_box {
   width: 100%;
   aspect-ratio: 582 / 320;
-  margin-bottom: 10px;
   background-color: gray;
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: block;
+}
 
+.insightItem img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -141,11 +146,16 @@
     width: 100%;
   }
 
+  .image_box {
+    width: 100%;
+    aspect-ratio: 582 / 320;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
   .insightItem img {
     width: 100%;
-    min-width: 262px;
-    max-height: none;
-    aspect-ratio: 582 / 320;
+    height: 100%;
     object-fit: cover;
     display: block;
   }
