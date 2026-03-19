@@ -50,7 +50,6 @@ export default function TopCarousel() {
     const fetchTopPosts = async () => {
       const response = await fetch("/api/top-posts");
       const data = await response.json();
-      console.log("topPosts:", data);
 
       if (!data.posts || data.posts.length === 0) {
         setPosts(mockPosts);
