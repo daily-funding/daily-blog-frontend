@@ -8,6 +8,7 @@
   position: relative;
   z-index: 2;
   background: white;
+  z-index: 10000;
 }
 
 .dailianBanner {
@@ -19,11 +20,5 @@
 .anotherInsight {
   position: relative;
   z-index: 2;
-  background: white;
-}
-
-.postContent {
-  position: relative;
-  z-index: 10000;
   background: white;
 }
