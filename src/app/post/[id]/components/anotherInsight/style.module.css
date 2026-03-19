@@ -52,7 +52,9 @@
 .insightItem img {
   max-height: 186px;
   width: 100%;
+  aspect-ratio: 582 / 320;
   margin-bottom: 10px;
+  background-color: gray;
 
   object-fit: cover;
   object-position: center;
