@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import "./categoryButton.css";
 import Link from "next/link";
-import { Category } from "../types/post";
+import { Category } from "@/src/types/post";
 
 const ALL_CATEGORY: Category = {
   category_id: 0,
