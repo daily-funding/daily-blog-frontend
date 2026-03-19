@@ -1,5 +1,6 @@
 export interface TopPost {
   post_id: number;
+  category_id: number;
   category_name: string;
   title: string;
   subtitle: string;
