@@ -6,6 +6,28 @@ import DailyTogether from "./components/dailyTogether";
 import AnotherInsight from "./components/anotherInsight";
 import { Suspense } from "react";
 
-export default async function PostDetail() {
-  return <div>post detail test</div>;
+export default async function PostDetail({
+  params,
+}: {
+  params: { id: string }; //Next가 page를 streaming & async rendering으로 처리한다. page가 async server component일 수 있기 때문에 params를 Promise로 전달한다.
+}) {
+  const { id } = await params;
+
+  const response = await fetch(`${API_URLS.posts}${id}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch post: ${response.status}`);
+  }
+  const post = await response.json();
+  console.log(post);
+
+  return (
+    <div className="postPage">
+      <TopPost post={post} />
+      <PostContent content={post.content} />
+      <DailyTogether />
+      <Suspense fallback={null}>
+        <AnotherInsight id={id} />
+      </Suspense>
+    </div>
+  );
 }
