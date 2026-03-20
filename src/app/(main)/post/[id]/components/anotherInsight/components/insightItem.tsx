@@ -9,7 +9,9 @@ export default function InsightItem({
 }) {
   return (
     <div className={styles.insightItem}>
-      <img src={insight.preview_image} alt="" />
+      <div className={styles.image_box}>
+        <img src={insight.preview_image} alt="" />
+      </div>
       <div className={styles.black_back}>
         <span>{insight.category_name}</span>
       </div>

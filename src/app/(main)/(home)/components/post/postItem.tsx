@@ -17,7 +17,9 @@ export default function PostItem({ post }: PostItemProps) {
 
   return (
     <div className="article_item">
-      <img src={post.preview_image} alt="" onClick={onClick} />
+      <div className="post_image_wrapper">
+        <img src={post.preview_image} alt="" onClick={onClick} />
+      </div>
       <div className="post_info">
         <div className="articleCategoryBadge">{post.category_name}</div>
         <p className="postInfoTitle" onClick={onClick}>

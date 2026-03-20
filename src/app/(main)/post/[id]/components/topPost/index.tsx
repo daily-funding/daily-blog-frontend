@@ -2,16 +2,22 @@
 "use client";
 
 import "./style.css";
+import Link from "next/link";
 import { TopPostProps } from "@/src/types/post";
 
-export default function TopPost({ post } : TopPostProps) {
+export default function TopPost({ post }: TopPostProps) {
   return (
     <div className="topPost">
       <div className="topPostTrack">
         <div className="topPostSlide">
           <img src={post.preview_image} alt="" />
           <div className="topPostTextSection">
-            <p className="category_badge">{post.category_name}</p>
+            <Link
+              href={`/?category_id=${post.category_id}&s=1`}
+              className="category_badge"
+            >
+              {post.category_name}
+            </Link>
             <h1 className="title">{post.title}</h1>
             <p className="subtitle">{post.subtitle}</p>
           </div>

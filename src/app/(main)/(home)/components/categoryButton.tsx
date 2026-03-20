@@ -13,6 +13,8 @@ const ALL_CATEGORY: Category = {
 
 export default function CategoryButton() {
   const [categories, setCategories] = useState<Category[]>([]);
+  const searchParams = useSearchParams();
+  const currentCategoryId = Number(searchParams.get("category_id")) || 0;
 
   useEffect(() => {
     async function fetchCategories() {
@@ -26,10 +28,7 @@ export default function CategoryButton() {
         const fetchedCategories: Category[] = Array.isArray(data.categories)
           ? data.categories
           : [];
-
-        const categoriesWithAll = [ALL_CATEGORY, ...fetchedCategories];
-
-        setCategories(categoriesWithAll);
+        setCategories([ALL_CATEGORY, ...fetchedCategories]);
       } catch (error) {
         setCategories([ALL_CATEGORY]);
         console.error("Failed to fetch categories:", error);
@@ -38,8 +37,19 @@ export default function CategoryButton() {
 
     fetchCategories();
   }, []);
-  const searchParams = useSearchParams();
-  const currentCategoryId = Number(searchParams.get("category_id")) || 0;
+
+  useEffect(() => {
+    if (searchParams.get("s") === "1") {
+      setTimeout(() => {
+        document.getElementById("post-section")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+
+      const params = new URLSearchParams(searchParams.toString());
+      params.delete("s");
+      const newUrl = params.toString() ? `/?${params.toString()}` : "/";
+      window.history.replaceState(null, "", newUrl);
+    }
+  }, [searchParams]);
 
   return (
     <div className="categorySection">
@@ -47,7 +57,7 @@ export default function CategoryButton() {
         const href =
           category.category_id === 0
             ? "/"
-            : `/?category_id=${category.category_id}`;
+            : `/?category_id=${category.category_id}&s=1`;
 
         return (
           <Link
