@@ -7,14 +7,25 @@ import AnotherInsight from "./components/anotherInsight";
 import { Suspense } from "react";
 import { Metadata } from "next";
 
+async function getPost(id: string) {
+  const response = await fetch(`${API_URLS.posts}${id}/`, {
+    next: { revalidate: 60 * 60 * 6, tags: ["posts"] },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch post: ${response.status}`);
+  }
+
+  return response.json();
+}
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const response = await fetch(`${API_URLS.posts}${id}/`);
-  const post = await response.json();
+  const post = await getPost(id);
 
   return {
     title: post.title,
@@ -28,12 +39,7 @@ export default async function PostDetail({
 }) {
   const { id } = await params;
 
-  const response = await fetch(`${API_URLS.posts}${id}/`);
-  if (!response.ok) {
-    throw new Error(`Failed to fetch post: ${response.status}`);
-  }
-  const post = await response.json();
-  console.log(post);
+  const post = await getPost(id);
 
   return (
     <div className="postPage">

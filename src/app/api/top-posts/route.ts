@@ -2,7 +2,9 @@ import { API_URLS } from "@/src/constants/api";
 
 export async function GET() {
   try {
-    const response = await fetch(API_URLS.topPosts);
+    const response = await fetch(API_URLS.topPosts, {
+      next: { revalidate: 60 * 60 * 6, tags: ["posts"] },
+    });
 
     if (!response.ok) {
       return Response.json(
