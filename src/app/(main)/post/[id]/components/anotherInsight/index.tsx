@@ -10,7 +10,7 @@ type InsightResponse = {
 async function getInsights(id: string): Promise<InsightResponse | null> {
   try {
     const response = await fetch(`${API_URLS.posts}${id}/insight/`, {
-      next: { revalidate: 5, tags: ["posts"] },
+      cache: "no-cache"
     });
 
     if (!response.ok) {

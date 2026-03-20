@@ -3,7 +3,7 @@ import { API_URLS } from "@/src/constants/api";
 export async function GET() {
   try {
     const response = await fetch(API_URLS.categories, {
-      next: { revalidate: 10 },
+      cache: "no-cache"
     });
 
     if (!response.ok) {
