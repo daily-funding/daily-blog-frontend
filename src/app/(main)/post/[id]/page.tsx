@@ -9,7 +9,7 @@ import { Metadata } from "next";
 
 async function getPost(id: string) {
   const response = await fetch(`${API_URLS.posts}${id}/`, {
-    next: { revalidate: 60 * 60 * 6, tags: ["posts"] },
+    next: { revalidate: 5, tags: ["posts"] },
   });
 
   if (!response.ok) {

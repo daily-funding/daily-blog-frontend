@@ -14,7 +14,7 @@ export async function GET(request: Request) {
     }
 
     const response = await fetch(`${API_URLS.posts}?${params.toString()}`, {
-      next: { revalidate: 60 * 60 * 6, tags: ["posts"] },
+      next: { revalidate: 5, tags: ["posts"] },
     });
 
     if (!response.ok) {

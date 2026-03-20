@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 export default async function PostList() {
   const response = await fetch(API_URLS.posts, {
-    next: { revalidate: 60 * 60 * 6, tags: ["posts"] },
+    next: { revalidate: 5, tags: ["posts"] },
   });
 
   if (!response.ok) {
