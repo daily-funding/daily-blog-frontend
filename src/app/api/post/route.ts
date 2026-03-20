@@ -13,7 +13,9 @@ export async function GET(request: Request) {
       params.set("category_id", categoryId);
     }
 
-    const response = await fetch(`${API_URLS.posts}?${params.toString()}`);
+    const response = await fetch(`${API_URLS.posts}?${params.toString()}`, {
+      next: { revalidate: 60 * 60 * 6, tags: ["posts"] },
+    });
 
     if (!response.ok) {
       return Response.json(

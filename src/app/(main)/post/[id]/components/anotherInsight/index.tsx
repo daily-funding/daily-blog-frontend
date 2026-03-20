@@ -1,5 +1,4 @@
 import { API_URLS } from "@/src/constants/api";
-import InsightItem from "./components/insightItem";
 import styles from "./style.module.css";
 import { InsightItemProps } from "@/src/types/post";
 import InsightCardSection from "./components/insightCardSection";
@@ -10,7 +9,9 @@ type InsightResponse = {
 
 async function getInsights(id: string): Promise<InsightResponse | null> {
   try {
-    const response = await fetch(`${API_URLS.posts}${id}/insight/`);
+    const response = await fetch(`${API_URLS.posts}${id}/insight/`, {
+      next: {revalidate: 60 * 60 * 6, tags: ["posts"]}
+    });
 
     if (!response.ok) {
       return null;
