@@ -13,7 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DailyInsight"
+  title: "DailyInsight",
+  description: "daily funding insight blog"
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
