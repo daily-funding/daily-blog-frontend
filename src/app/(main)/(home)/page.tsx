@@ -1,6 +1,6 @@
 import CategoryButton from "./components/categoryButton";
 import TopCarousel from "./components/topCarousel";
-import UpButton from "../../components/upButton";
+import UpButton from "../../../components/upButton";
 import "./home.css";
 import PostList from "./components/post/postList";
 import { Suspense } from "react";
