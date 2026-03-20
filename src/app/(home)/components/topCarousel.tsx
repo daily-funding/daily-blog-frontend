@@ -6,10 +6,12 @@ import "./topCarousel.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { TopPost } from "@/src/types/post";
+import Link from "next/link";
 
 const mockPosts: TopPost[] = [
   {
     post_id: 1,
+    category_id: 1,
     title: "데일리펀딩 블로그에 오신 것을 환영합니다 환영 환영 환영묵",
     subtitle: "현재 게시물이 없어 임시 목업 데이터를 표시하고 있습니다.",
     preview_image: "/carousel/sample-image.jpg",
@@ -17,6 +19,7 @@ const mockPosts: TopPost[] = [
   },
   {
     post_id: 2,
+    category_id: 2,
     title: "데일리펀딩 블로그에 오신 것을 환영합니다 환영 환영 환영묵",
     subtitle: "현재 게시물이 없어 임시 목업 데이터를 표시하고 있습니다.",
     preview_image: "/carousel/sample-image.jpg",
@@ -68,7 +71,12 @@ export default function TopCarousel() {
           <div className="topCarouselSlide" key={post.post_id}>
             <img src={post.preview_image} alt="" />
             <div className="topCarouselTextSection">
-              <p className="category_badge">{post.category_name}</p>
+              <Link
+                href={`/?category_id=${post.category_id}&s=1`}
+                className="category_badge"
+              >
+                {post.category_name}
+              </Link>
               <button
                 type="button"
                 className="topCarouselPostLink"

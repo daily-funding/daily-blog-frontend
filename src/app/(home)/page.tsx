@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="home">
       <TopCarousel />
-      <div className="postSection">
+      <div className="postSection" id="post-section">
         <Suspense fallback={null}>
           <CategoryButton />
         </Suspense>
