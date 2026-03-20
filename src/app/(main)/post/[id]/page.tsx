@@ -5,6 +5,21 @@ import "./style.css";
 import DailyTogether from "./components/dailyTogether";
 import AnotherInsight from "./components/anotherInsight";
 import { Suspense } from "react";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const response = await fetch(`${API_URLS.posts}${id}/`);
+  const post = await response.json();
+
+  return {
+    title: post.title,
+  };
+}
 
 export default async function PostDetail({
   params,

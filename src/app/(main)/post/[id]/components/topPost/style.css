@@ -83,6 +83,8 @@
   text-align: center;
   word-break: keep-all;
 
+  cursor: default;
+
   user-select: none;
 }
 
@@ -98,6 +100,8 @@
 
   text-align: center;
   word-break: keep-all;
+
+  cursor:default;
 
   user-select: none;
 }
@@ -192,7 +196,7 @@
 @media (max-width: 414px) {
   .topPost {
     position: sticky;
-  top: 0;
+    top: 0;
     width: 100%;
     height: 427px;
   }
